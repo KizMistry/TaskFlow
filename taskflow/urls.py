@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('profiles.urls')),
     path('', include('projects.urls')),
     path('', include('tasks.urls')),
+    path('', include('notes.urls')),
 ]
