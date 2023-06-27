@@ -5,6 +5,8 @@ class ProjectSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
+    tasks_count = serializers.ReadOnlyField()
+    notes_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -15,4 +17,5 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'profile_id',
             'created_at', 'updated_at', 'title', 'description',
+            'tasks_count', 'notes_count',
         ]
