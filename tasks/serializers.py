@@ -5,6 +5,7 @@ class TaskSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     project_owner = serializers.ReadOnlyField(source='project.owner.username')
+    notes_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -15,7 +16,7 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'project', 'project_owner',
             'created_at', 'updated_at', 'task', 'description', 'file',
-            'task_priority', 'task_status',
+            'task_priority', 'task_status', 'notes_count',
         ]
 
 class TaskDetailSerializer(TaskSerializer):
