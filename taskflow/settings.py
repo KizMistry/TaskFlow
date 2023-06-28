@@ -64,7 +64,8 @@ ALLOWED_HOSTS = [
     '8000-kizmistry-taskflow-40gpd5dna5d.ws-eu100.gitpod.io',
     '8000-kizmistry-taskflow-40gpd5dna5d.ws-eu101.gitpod.io',
     'localhost',
-    'taskflow-app.herokuapp.com']
+    'taskflow-app.herokuapp.com',
+    'https://taskflow-app-fe0b343d965d.herokuapp.com/',]
 
 
 # Application definition
