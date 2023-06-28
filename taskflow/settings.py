@@ -30,8 +30,16 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication'
         if 'DEV' in os.environ
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )]
+    )],
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    'DATETIME_FORMAT': '%d %b %Y',
 }
+if 'DEV' not in os.environ:
+    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
+        'rest_framework.renderers.JSONRenderer',
+    ]
 REST_USE_JWT = True
 JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
@@ -50,7 +58,7 @@ SECRET_KEY = 'django-insecure-p@^x$g-69h0q=4wqb!uftph=q4ryjczad9-$f)8bihy+cfvb!#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-kizmistry-taskflow-40gpd5dna5d.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['8000-kizmistry-taskflow-40gpd5dna5d.ws-eu100.gitpod.io', '8000-kizmistry-taskflow-40gpd5dna5d.ws-eu101.gitpod.io']
 
 
 # Application definition
