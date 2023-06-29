@@ -31,4 +31,5 @@ urlpatterns = [
     path('', include('projects.urls')),
     path('', include('tasks.urls')),
     path('', include('notes.urls')),
+    path('', include('collaborators.urls')),
 ]
