@@ -96,6 +96,7 @@ INSTALLED_APPS = [
     'projects',
     'tasks',
     'notes',
+    'collaborators',
 ]
 SITE_ID = 1
 MIDDLEWARE = [
