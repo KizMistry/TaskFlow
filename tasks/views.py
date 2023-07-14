@@ -11,10 +11,16 @@ class TaskList(generics.ListCreateAPIView):
     queryset = Task.objects.annotate(
         notes_count=Count('note', distinct=True),
     ).order_by('-created_at')
+    
 
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+    def get_queryset(self):
+        return Task.objects.annotate(
+        notes_count=Count('note', distinct=True),
+    ).order_by('-created_at').filter(owner=self.request.user)
 
 
 class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
