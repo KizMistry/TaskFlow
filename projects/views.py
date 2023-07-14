@@ -38,6 +38,12 @@ class ProjectList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
+    def get_queryset(self):
+        return Project.objects.annotate(
+        tasks_count=Count('task', distinct=True),
+        notes_count=Count('note', distinct=True),
+    ).order_by('-created_at').filter(owner=self.request.user)
+
 
 class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
