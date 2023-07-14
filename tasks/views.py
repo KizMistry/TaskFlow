@@ -1,5 +1,6 @@
 from django.db.models import Count
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from taskflow.permissions import IsOwnerOrReadOnly
 from .models import Task
 from .serializers import TaskSerializer, TaskDetailSerializer
@@ -11,8 +12,18 @@ class TaskList(generics.ListCreateAPIView):
     queryset = Task.objects.annotate(
         notes_count=Count('note', distinct=True),
     ).order_by('-created_at')
+    filter_backends = [
+        filters.OrderingFilter,
+        filters.SearchFilter,
+        DjangoFilterBackend,
+    ]
+    filterset_fields = [
+        'project',
+    ]
+    search_fields = [
+        'project',
+    ]
     
-
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
