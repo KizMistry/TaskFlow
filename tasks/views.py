@@ -19,9 +19,11 @@ class TaskList(generics.ListCreateAPIView):
     ]
     filterset_fields = [
         'project',
+        'owner'
     ]
     search_fields = [
         'project',
+        'owner'
     ]
     
 
