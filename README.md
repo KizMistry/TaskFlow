@@ -1,4 +1,38 @@
-# Project Deployment Guide
+# TaskFlow API
+
+Welcome to back-end of my TaskFlow app. This back-end hosts the Data Models and Endpoints for the TaskFlow API.
+TaskFlow is a task management application that enables users to organize and track their projects and tasks.
+
+## Installation
+
+These are the installation steps taken:
+
+1. **Install Django:** 
+   - Open terminal and run the following command to install Django (version 4):
+     ```
+     pip3 install 'django<4'
+     ```
+
+2. **Start the Project:**
+   - Create a new Django project and initialize it in the current directory using the following command:
+     ```
+     django-admin startproject TaskFlow .
+     ```
+
+3. **Connect to Cloudinary:**
+   - Install the Django Cloudinary Storage library to connect project to Cloudinary:
+     ```
+     pip install django-cloudinary-storage
+     ```
+
+4. **Install Pillow:**
+   - Install the Pillow library, which provides image processing capabilities required for the project:
+     ```
+     pip install Pillow
+     ```
+
+
+## API Deployment
 
 This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
 
