@@ -128,7 +128,7 @@ This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
 ### Verification
 
 19. **Check Deployment:**
-    - The app should be up and running on Heroku. Click "Open app" to check.
+    - Click "Open app" to check the app is running on Heroku.
 
 20. **Additional Check:**
     - Verify the JSON welcome message on the home screen.
@@ -137,9 +137,9 @@ This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
 ### Bug Fix: dj-rest-auth
 
 21. **Problem Statement:**
-    - It turns out that dj-rest-auth has a bug that doesn't allow users to log out.
+    - dj-rest-auth has a bug that doesn't allow users to log out.
 
-22. **Proposed Solution (Step 1):**
+22. **Solution (Step 1):**
     - In `views.py`, import JWT_AUTH settings from `settings.py`.
     - Write a logout view to clear cookies properly.
 
@@ -156,6 +156,14 @@ This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
 25. **Push and Deploy:**
     - Push changes to GitHub.
     - In Heroku, manually deploy code again.
+   
+## Libraries Used for Back-End
+
+Django REST Framework: This was used for building the API.
+
+Django Forms: This library was utilized for handling HTML forms in the TaskFlow web application. i.e Creating a Project and Task
+
+Django REST Auth: This library was used for user management to enable users on the front-end to create and manage their account using requests to the API endpoints
 
 
 The live link can be found here - https://taskflow-app-734253c0080e.herokuapp.com/
