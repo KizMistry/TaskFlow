@@ -157,13 +157,13 @@ This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
     - Push changes to GitHub.
     - In Heroku, manually deploy code again.
    
+The live link can be found here - https://taskflow-app-734253c0080e.herokuapp.com/
+
 ## Libraries Used for Back-End
 
-Django REST Framework: This was used for building the API.
+Django REST Framework: This was the main Python library used for building the API.
 
-Django Forms: This library was utilized for handling HTML forms in the TaskFlow web application. i.e Creating a Project and Task
+Django Forms: This library was utilized for handling HTML forms in the TaskFlow web application. i.e. Creating a Project and Task
 
-Django REST Auth: This library was used for user management to enable users on the front-end to create and manage their account using requests to the API endpoints
+Django REST Auth: This library was used for user management to enable users on the front-end to create and manage their accounts using requests to the API endpoints
 
-
-The live link can be found here - https://taskflow-app-734253c0080e.herokuapp.com/
