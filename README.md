@@ -161,9 +161,9 @@ The live link can be found here - https://taskflow-app-734253c0080e.herokuapp.co
 
 ## Libraries Used for Back-End
 
-Django REST Framework: This was the main Python library used for building the API.
+1. **Django REST Framework:** This Python library served as the core framework for building the API, providing essential tools for API development.
 
-Django Forms: This library was utilized for handling HTML forms in the TaskFlow web application. i.e. Creating a Project and Task
+2. **Django Forms:** Django Forms played a pivotal role in handling HTML forms within the TaskFlow web application. It was employed for tasks such as creating projects and tasks, making the application interactive.
 
-Django REST Auth: This library was used for user management to enable users on the front-end to create and manage their accounts using requests to the API endpoints
+3. **Django REST Auth:** Django REST Auth was instrumental in user registration and authentication management. It allowed users on the front end to create and manage their accounts by making requests to the API endpoints. Its compatibility with Django REST Framework ensured seamless integration.
 
