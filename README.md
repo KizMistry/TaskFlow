@@ -169,7 +169,7 @@ The live link can be found here - https://taskflow-app-734253c0080e.herokuapp.co
 
 ## Testing 
 
-All sections of Taskdflow were tested Front-End to Back-End; Some of the main testing points included:
+All sections of Taskflow were tested End to End; Some of the main testing points included:
 
 | Test       | Expected           | Passed  |
 | :------------- |:-------------:| :-----:|
@@ -186,8 +186,6 @@ All sections of Taskdflow were tested Front-End to Back-End; Some of the main te
 | Authenticated user tries creating tasks for projects they don't own via URL endpoints '/projects/:id/tasks/create' | Redirected to Home/Projects Page | ✅ |
 | Authenticated user tries accessing tasks they don't own via URL endpoints '/tasks/:id' | Redirected to Home/Projects Page | ✅ |
 | Authenticated user tries editing task they don't own via URL endpoints '/tasks/:id/edit' | Redirected to Home/Projects Page | ✅ |
-
-
 | User clicks all navigation links on home page     | Taken to corresponding page | ✅ |
 | User logs in / registers | Nav links change and access to projects/tasks becomes available | ✅ |
 | User clicks 'Create Project'| Directed to create project page | ✅ |
