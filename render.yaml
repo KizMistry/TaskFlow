@@ -3,8 +3,9 @@ services:
     name: taskflow-api
     env: python
     buildCommand: |
-      pip install setuptools==68.0.0
-      pip install -r requirements.txt
+      pip install --upgrade pip
+      pip install setuptools==68.0.0 wheel
+      PIP_NO_BUILD_ISOLATION=true pip install -r requirements.txt
       python manage.py collectstatic --noinput
       python manage.py migrate
     startCommand: gunicorn your_project_name.wsgi:application
