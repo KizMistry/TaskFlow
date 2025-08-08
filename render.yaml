@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: taskflow-backend
+    name: taskflow-api
     env: python
-    plan: free
     buildCommand: |
+      pip install setuptools==68.0.0
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
       python manage.py migrate
-    startCommand: gunicorn taskflow.wsgi:application
-    autoDeploy: true
+    startCommand: gunicorn your_project_name.wsgi:application
+    plan: free
