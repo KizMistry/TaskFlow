@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: taskflow-backend
-    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
-    startCommand: gunicorn taskflow.wsgi
-    autoDeploy: true
-
