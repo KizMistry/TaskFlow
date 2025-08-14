@@ -65,7 +65,7 @@ ALLOWED_HOSTS = [
     '8000-kizmistry-taskflow-40gpd5dna5d.ws-eu100.gitpod.io',
     '8000-kizmistry-taskflow-40gpd5dna5d.ws-eu101.gitpod.io',
     'localhost',
-    'https://taskflow-app.herokuapp.com/',
+    'https://taskflowkm.netlify.app/',
     os.environ.get('ALLOWED_HOST'),
     ]
 
