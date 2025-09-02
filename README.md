@@ -1,9 +1,9 @@
 # TaskFlow API
 
-Welcome to back-end of my TaskFlow app. This back-end hosts the Data Models and Endpoints for the TaskFlow API.
+Welcome to the back-end of my TaskFlow app. This back-end hosts the Data Models and Endpoints for the TaskFlow API.
 TaskFlow is a task management application that enables users to organize and track their projects and tasks.
 
-The Front-End React TaskFlow app can be found here: https://taskflow-2023-b9a3557ae482.herokuapp.com/
+The Front-End React TaskFlow app can be found here: https://taskflowkm.netlify.app/
 
 ## Installation
 
@@ -22,7 +22,7 @@ These are the installation steps taken:
      ```
 
 3. **Connect to Cloudinary:**
-   - Install the Django Cloudinary Storage library to connect project to Cloudinary:
+   - Install the Django Cloudinary Storage library to connect the project to Cloudinary:
      ```
      pip install django-cloudinary-storage
      ```
@@ -128,11 +128,11 @@ This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
 ### Verification
 
 19. **Check Deployment:**
-    - Click "Open app" to check the app is running on Heroku.
+    - Click "Open app" to check that the app is running on Heroku.
 
 20. **Additional Check:**
     - Verify the JSON welcome message on the home screen.
-    - Check the profile for the superuser at `/profiles/` on root URL.
+    - Check the profile for the superuser at `/profiles/` on the root URL.
 
 ### Bug Fix: dj-rest-auth
 
@@ -155,9 +155,9 @@ This is the step-by-step process undertaken to deploy my Taskflow API to Heroku.
 
 25. **Push and Deploy:**
     - Push changes to GitHub.
-    - In Heroku, manually deploy code again.
+    - In Heroku, manually deploy the code again.
    
-The live link can be found here - https://taskflow-app-734253c0080e.herokuapp.com/
+The live link can be found here - https://taskflowkm.netlify.app/
 
 ## Libraries Used for Back-End
 
@@ -185,7 +185,7 @@ All sections of Taskflow were tested End to End; Some of the main testing points
 | Authenticated user tries editing projects they don't own via URL endpoints '/projects/:id/edit' | Redirected to Home/Projects Page | ✅ |
 | Authenticated user tries creating tasks for projects they don't own via URL endpoints '/projects/:id/tasks/create' | Redirected to Home/Projects Page | ✅ |
 | Authenticated user tries accessing tasks they don't own via URL endpoints '/tasks/:id' | Redirected to Home/Projects Page | ✅ |
-| Authenticated user tries editing task they don't own via URL endpoints '/tasks/:id/edit' | Redirected to Home/Projects Page | ✅ |
+| Authenticated user tries editing a task they don't own via URL endpoints '/tasks/:id/edit' | Redirected to Home/Projects Page | ✅ |
 | User clicks all navigation links on home page     | Taken to corresponding page | ✅ |
 | User logs in / registers | Nav links change and access to projects/tasks becomes available | ✅ |
 | User clicks 'Create Project'| Directed to create project page | ✅ |
